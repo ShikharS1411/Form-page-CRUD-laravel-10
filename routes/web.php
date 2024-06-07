@@ -20,6 +20,9 @@ Route::post("categories/create", [App\Http\Controllers\CategoryController::class
 Route::get("categories/{id}/edit", [App\Http\Controllers\CategoryController::class,"edit"]);
 Route::put("categories/{id}/edit", [App\Http\Controllers\CategoryController::class,"update"]);
 Route::get("categories/{id}/delete", [App\Http\Controllers\CategoryController::class,"destroy"]);
+Route::post('/update-category-status', [App\Http\Controllers\CategoryController::class, 'updateStatus'])->name('category.updateStatus');
+
+
 // Route::get('/', function () {
 //     return view('Frontend.index');
 // });
